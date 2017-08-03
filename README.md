@@ -27,7 +27,8 @@ Now, starting with `K_p = K_i = K_d = 1`, I find that the car in simulation alre
   [![PID steering](http://img.youtube.com/vi/SrHDlw_z_qw/0.jpg)](http://www.youtube.com/watch?v=SrHDlw_z_qw)
   
   
-#Thottle controller
+# Thottle controller
+
 To achieve maximum possible speed, I have implemented a P-controller for throttle. This part is implemented in `src/main_extra.cpp` (please modify makefile to compile or simply rename this file to `src/main.cpp`). There are a few modifications I have made to deal with high speeds. Firstly, note that steering angle compensation needed at high speeds is smaller compared to that at low speeds, otherwise the car goes out of control. To this end, I have modified CTE for steering angle as follows :
 
 ```
